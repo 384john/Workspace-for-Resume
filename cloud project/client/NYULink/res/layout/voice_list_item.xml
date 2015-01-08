@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEEEC" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.2dp"
+        android:background="#818790"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/item_user_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/my_photo_for_drawer" />
+
+        <TextView
+            android:id="@+id/item_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_user_image"
+            android:layout_marginLeft="15dp"
+            android:singleLine="true"
+            android:text="Username"
+            android:textColor="#7BC143"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/voice_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/item_user_image"
+            android:layout_below="@id/item_username"
+            android:textColor="#fff"
+            android:text="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et que"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_username"
+            android:layout_alignRight="@+id/item_username"
+            android:layout_alignParentRight="true" >
+            
+	        <ImageView
+	            android:id="@+id/voice_comment_icon"
+	            android:layout_width="25dp"
+	            android:layout_height="25dp"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/icon_comment_white" />
+	        
+	        <TextView
+	            android:id="@+id/voice_comment_num"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@id/voice_comment_icon"
+	            android:layout_centerVertical="true"
+	            android:singleLine="true"
+	            android:text="99"
+	            android:textColor="#fff"
+	            android:textSize="10sp" />
+		</RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

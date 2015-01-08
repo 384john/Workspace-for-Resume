@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nyu.cloudcomputing.nyulink"
+    android:versionCode="1"
+    android:versionName="1.0" >
+ 	<!-- 步骤（1）设置Google Map API v2 Key，其中com.nyu.cloudcomputing.nyulink为package的名字 -->
+ 	<permission android:name="com.nyu.cloudcomputing.nyulink.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+ 	<uses-permission android:name="com.nyu.cloudcomputing.nyulink.permission.MAPS_RECEIVE"/>
+	<!-- 步骤（3）设置使用Google Map服务所需的许可 -->
+	<!-- Google Map是互联网业务，允许互联网 -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+	 <!-- 允许API检查网络连接状态，已确定是否可以下载数据 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 允许将Google地图数据缓存在SD卡上 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<!-- 允许API访问Google的基于Web的业务 --> 
+    <uses-permission 
+	    android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <!-- 地图应用经常和定位相关，允许粗定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 允许精确定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 步骤（4）Google Map v2需要OpenGL ES，需要用uses-feature中声明 -->
+	<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.nyulink.controller.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nyulink.controller.SettingActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.MapMainActivity" 
+                  android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        </activity>
+        <activity android:name="com.nyulink.controller.LoginActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.RegisterActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.AboutActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.Setting_yijianActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.UserInfoActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.UserInfoEditActivity" >
+        </activity>
+        <activity
+            android:name="com.nyulink.controller.CreateVoiceActivity"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity android:name="com.nyulink.controller.VoiceDetailActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.CameraActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.PhotoAct" >
+        </activity>
+        <activity
+            android:name="com.nyulink.controller.SendCommentActivity"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity android:name="com.nyulink.controller.AuditActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.ChildDetailActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.CreateChildInfoActivity" >
+        </activity>
+        <activity android:name="com.nyulink.controller.SearchPeopleActivity" >
+        </activity>
+        <activity android:name="com.nyulink.tools.EventsListActivity" >
+        </activity>
+        <activity android:name="com.nyulink.tools.EventDetailActivity" >
+        </activity>
+        
+        <meta-data
+            android:name="com.appkefu.lib.appkey"
+            android:value="f6826b3592af28f2731d92d9ff5ca0f7" />
+        <!-- 聊天窗口, 可通过修改layout文件appkefu_chat_activity.xml自定义窗口UI -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFChatActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <!-- 客服个人资料窗口 -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFProfileActivity" />
+        <!-- 验证消息窗口，可通过修改layout文件appkefu_activity_subscribe_notification.xml自定义窗口UI -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFSubscribeNotificationActivity" />
+        <!-- 选择图片 -->
+        <activity
+            android:name="com.appkefu.lib.ui.activity.KFSelectPicActivity"
+            android:theme="@style/appkefu_dialog_style_bottom" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCChatActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCProfileActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCInvitationNotificationActivity" />
+
+        <!-- 发送语音辅助service -->
+        <service
+            android:name="com.appkefu.lib.soundrecorder.KFRecorderService"
+            android:exported="false" >
+        </service>
+
+        <!-- 主service -->
+        <service
+            android:name="com.appkefu.lib.service.KFMainService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.CONNECT" />
+                <action android:name="com.appkefu.lib.action.DISCONNECT" />
+                <action android:name="com.appkefu.lib.action.TOGGLE" />
+                <action android:name="com.appkefu.lib.action.SEND" />
+                <action android:name="com.appkefu.lib.action.NETWORK_STATUS_CHANGED" />
+                <action android:name="com.appkefu.lib.action.XMPP.MESSAGE_RECEIVED" />
+                <action android:name="com.appkefu.lib.action.PRESENCE_CHANGED" />
+                <action android:name="com.appkefu.lib.action.MUC_INVITATION" />
+            </intent-filter>
+        </service>
+
+        <!--  -->
+        <receiver
+            android:name="com.appkefu.lib.receivers.KFPublicIntentReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.CONNECT" />
+                <action android:name="com.appkefu.lib.action.DISCONNECT" />
+                <action android:name="com.appkefu.lib.action.TOGGLE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 开机自动建立连接 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 连接电源自动建立连接 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFPowerReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听网络变化 -->
+        <receiver
+            android:name="com.appkefu.lib.receivers.KFNetworkConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 检测链接状态 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFAlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.LOGIN_ALARM" />
+            </intent-filter>
+        </receiver>
+        
+          <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+          <!-- 步骤（2）设置Google Map API v2 Key -->
+          <meta-data 
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAnb20LTesQt_LyqQAYgmC-GNLID3uPR90"/>   
+        
+    </application>
+
+</manifest>

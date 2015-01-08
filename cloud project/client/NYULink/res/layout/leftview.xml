@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEEEC"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/MenuUserInfo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#19252C"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/MenuUserImage"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/my_photo_for_drawer" />
+
+        <TextView
+            android:id="@+id/MenuUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/MenuUserImage"
+            android:layout_alignTop="@id/MenuUserImage"
+            android:text="@string/MenuUserName"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+        
+        <TextView
+            android:id="@+id/MenuUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/MenuUserImage"
+            android:layout_alignBottom="@id/MenuUserImage"
+            android:text="@string/MenuUserEmail"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+        
+        <ImageView
+            android:id="@+id/img_UserMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/logout" />
+        
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fff" >
+
+            <RelativeLayout
+                android:id="@+id/LeftHot"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="22dp" >
+
+                <TextView
+                    android:id="@+id/MenuVoiceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="VOICE"
+                    android:textColor="#53534F"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LeftEvent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="22dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Local Events"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LeftContact"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="22dp" >
+
+                <TextView
+                    android:id="@+id/MenuContactText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="CONTACT"
+                    android:textColor="#53534F"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LeftScrip"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="22dp" >
+
+                <TextView
+                    android:id="@+id/MenuGossipText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="GOSSIP"
+                    android:textColor="#53534F"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LeftNear"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="22dp" >
+
+                <TextView
+                    android:id="@+id/MenuMapText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="EXPLORE"
+                    android:textColor="#53534F"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="#EFEEEC"
+	            android:padding="18dp" >
+	            
+	            <ImageView
+	                android:id="@+id/icon_about"
+	                android:layout_width="25dp"
+	                android:layout_height="25dp"
+	                android:src="@drawable/ic_action_about" />
+	            
+	            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/icon_about"
+                    android:layout_marginLeft="10dp"
+                    android:text="About"
+                    android:textSize="12sp"
+                    android:textColor="#74726E" />
+	        </RelativeLayout>
+	        
+        </LinearLayout>
+        
+    </ScrollView>
+
+</LinearLayout>

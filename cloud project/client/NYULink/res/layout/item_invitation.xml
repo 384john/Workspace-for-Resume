@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.2dp"
+        android:padding="12dp" >
+
+        <ImageView
+            android:id="@+id/invitation_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/my_photo_for_drawer" />
+
+        <TextView
+            android:id="@+id/invitation_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/invitation_img"
+            android:layout_alignTop="@id/invitation_img"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="Username"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/invitation_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invitation_username"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/invitation_img"
+            android:background="@drawable/nearby_gender_male"
+            android:text="Age"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/invitation_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/invitation_username"
+            android:layout_toRightOf="@+id/invitation_img"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="Status"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/invitation_operation"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/submit2"
+            android:focusable="false" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>
